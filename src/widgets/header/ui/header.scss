@@ -1,0 +1,26 @@
+.header {
+  display: grid;
+  grid-template-columns: 20% auto;
+  justify-items: end;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+  &__subtitle {
+    text-align: center;
+    text-decoration: underline;
+  }
+  &__section {
+    &-first {
+      justify-items: center;
+    }
+    &-second {
+      display: flex;
+    }
+  }
+  &__titles {
+    display: flex;
+    gap: 15px;
+  }
+  &__currency {
+    text-align: center;
+  }
+}

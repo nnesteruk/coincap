@@ -1,79 +1,19 @@
-$black: rgb(0, 0, 0);
-$white: #fff;
+@use './normalise';
 
-*,
-*::after,
-*::before {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-}
+:root {
+  --color-white: #ffffff;
+  --color-white-some-gray: #ffe6ec;
 
-ul,
-ol,
-li {
-  list-style: none;
-}
+  --color-black: #000000;
+  --color-black-with-opacity: #0000002f;
 
-:focus,
-:active {
-  outline: none;
-}
+  --color-pink: #f61e9c;
+  --color-pink-bright: #ff69b4;
 
-a:focus,
-a:active {
-  outline: none;
+  --color-green-dark: #007c00;
+  --color-red: red;
 }
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-a:hover {
-  color: inherit;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-html,
 body {
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  color: var(--var-body-fc);
-  font-family: 'Regular';
-  font-weight: 400;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-  height: 100vh; /* Высота окна браузера */
-}
-
-@mixin noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Opera and Firefox */
-}
-
-.container {
-  max-width: 1060px;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 10px;
+  background-color: var(--color-white-some-gray);
+  height: 100vh;
 }

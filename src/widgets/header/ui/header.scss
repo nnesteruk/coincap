@@ -1,12 +1,31 @@
 .header {
-  display: grid;
-  grid-template-columns: 20% auto;
-  justify-items: end;
-  align-items: center;
-  font-family: 'Roboto', sans-serif;
+  &.MuiPaper-root {
+    background-color: var(--color-white);
+    color: var(--header-back);
+    padding: 10px 0px;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: start;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+  }
+
   &__subtitle {
     text-align: center;
     text-decoration: underline;
+  }
+
+  &__titles {
+    display: flex;
+    gap: 15px;
+  }
+  &__currency {
+    text-align: center;
+    p:first-child {
+      font-weight: 600;
+    }
   }
   &__section {
     &-first {
@@ -14,13 +33,23 @@
     }
     &-second {
       display: flex;
+      p:first-child {
+        font-weight: 500;
+        text-align: center;
+      }
+
+      button {
+        margin-right: 10px;
+        background-color: var(--color-pink-bright);
+      }
+      button:hover {
+        background-color: var(--color-pink-bright);
+        opacity: 0.8;
+      }
+      button svg {
+        color: var(--color-white-some-gray);
+        font-size: 30px;
+      }
     }
-  }
-  &__titles {
-    display: flex;
-    gap: 15px;
-  }
-  &__currency {
-    text-align: center;
   }
 }

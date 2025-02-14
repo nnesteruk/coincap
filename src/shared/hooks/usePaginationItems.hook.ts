@@ -1,0 +1,25 @@
+import { useState } from 'react';
+import { Crypta } from 'entities/cryptaTable/model/crypta.type';
+
+export const usePaginationItems = (crypta: Crypta[], itemsPerPage = 10) => {
+  const [currentPage, setcurrentPage] = useState(1);
+  if (!crypta || crypta.length === 0) {
+    return {
+      totalPages: 0,
+      currentItems: [],
+      currentPage,
+      handlePage: () => {},
+    };
+  }
+
+  const stratIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = stratIndex + itemsPerPage;
+  const currentItems = crypta.slice(stratIndex, endIndex);
+
+  const totalPages = Math.ceil(crypta.length / itemsPerPage);
+
+  const handlePage = (page: number) => {
+    setcurrentPage(page);
+  };
+  return { totalPages, currentItems, currentPage, handlePage };
+};

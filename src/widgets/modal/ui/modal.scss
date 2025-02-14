@@ -1,0 +1,52 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 250px;
+  display: grid;
+  grid-template-rows: 25% 1fr;
+  border: 2px solid #000;
+  border-radius: 20px;
+  background-color: white;
+  text-align: center;
+  &__title {
+    align-self: center;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+.form {
+  align-self: start;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  font-size: 16px;
+  &__title {
+    align-self: center;
+  }
+  &__input {
+    justify-self: center;
+    padding: 10px 30px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 16px;
+    text-align: center;
+  }
+  &__button {
+    justify-self: center;
+    border: 2px solid var(--color-pink-bright);
+    background-color: var(--color-white);
+    border-radius: 20px;
+    padding: 10px 30px;
+    margin-top: 12px;
+  }
+  &__button:hover {
+    color: var(--color-white);
+    background-color: var(--color-pink-bright);
+    border-color: var(--color-black-with-opacity);
+  }
+  &__button:active {
+    transform: scale(0.95);
+  }
+}

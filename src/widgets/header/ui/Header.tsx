@@ -3,10 +3,10 @@ import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import './header.scss';
 export const Header = () => {
   return (
-    <AppBar position="static">
-      <div className="header container">
+    <AppBar position="fixed" className="header">
+      <div className="header__container container">
         <div className="header__section header__section--first">
-          <p className="header__subtitle">Популярные валюты:</p>
+          {/* <p className="header__subtitle">Популярные валюты:</p> */}
           <div className="header__titles">
             <article className="header__currency">
               <Typography>Bitcoin</Typography>

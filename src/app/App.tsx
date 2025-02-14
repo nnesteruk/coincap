@@ -1,13 +1,13 @@
 import { FC } from 'react';
 import { Providers } from './providers';
-import { BasicTable } from 'widgets/table/ui/table';
-import { Header } from 'widgets/header';
+import { TablePage } from 'pages/index';
+import { BasicModal } from 'widgets/modal';
 
 export const App: FC = () => {
   return (
     <Providers>
-      <Header />
-      <BasicTable />
+      <TablePage />
+      <BasicModal />
     </Providers>
   );
 };

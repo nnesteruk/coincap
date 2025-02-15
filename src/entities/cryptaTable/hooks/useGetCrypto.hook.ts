@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { fetchGetData } from '../api';
-import { useAppDispatch, useAppSelector } from 'shared/store';
-import { selectItem } from '../model/cryptaSlice';
+import { useAppDispatch, useAppSelector } from 'shared/state';
+import { selectItem } from '../../../shared/state/slices/cryptaSlice';
 
 export const useGetCrypto = () => {
   const dispatch = useAppDispatch();

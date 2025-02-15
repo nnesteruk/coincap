@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { CryptaSliceInitialState } from './crypta.type';
-import { fetchGetData } from '../api';
-import { rootReducer } from 'shared/store/store';
+import { CryptaSliceInitialState } from '../../../entities/cryptaTable/model/crypta.type';
+import { fetchGetData } from '../../../entities/cryptaTable/api';
+import { rootReducer } from 'shared/state/store';
 
 const initialState: CryptaSliceInitialState = {
   crypta: [],
@@ -33,9 +33,12 @@ export const cryptaSlice = createSlice({
     selectItem: (state) => state.crypta,
     selectError: (state) => state.error,
     selectIsLoading: (state) => state.isLoading,
+    selectTopThree: (state) => {
+      return state.crypta.slice(0, 3);
+    },
   },
 }).injectInto(rootReducer);
 
 export const { reducer } = cryptaSlice;
-export const { selectItem, selectIsLoading, selectError } =
+export const { selectItem, selectIsLoading, selectError, selectTopThree } =
   cryptaSlice.selectors;

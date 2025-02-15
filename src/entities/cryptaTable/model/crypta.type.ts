@@ -17,3 +17,7 @@ export type CryptaSliceInitialState = {
   isLoading: boolean;
   error: string;
 };
+
+export type CryptaTableProps = {
+  currentItems: Crypta[];
+};

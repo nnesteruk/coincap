@@ -13,9 +13,9 @@
   &__row-head {
     & th {
       color: var(--color-pink);
-      // &[align='left'] {
-      //   text-align: left;
-      // }
+      :hover {
+        font-weight: 400 !important;
+      }
     }
   }
   &__body {

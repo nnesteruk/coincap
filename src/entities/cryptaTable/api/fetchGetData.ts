@@ -1,6 +1,6 @@
 import { instance } from 'shared/api';
 import { Crypta } from '../model/crypta.type';
-import { createAppAsyncThunk } from 'shared/store/redux.hooks';
+import { createAppAsyncThunk } from 'shared/state';
 
 type FetchDataResponse = {
   data: Crypta[];

@@ -1,6 +1,7 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { AppDispatch, RootState } from './redux.type';
+
 import { createAsyncThunk } from '@reduxjs/toolkit';
+import { AppDispatch, RootState } from '..';
 
 export const useAppDispatch = useDispatch.withTypes<AppDispatch>();
 export const useAppSelector = useSelector.withTypes<RootState>();

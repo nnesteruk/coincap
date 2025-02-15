@@ -2,8 +2,8 @@ import { Modal } from '@mui/material';
 import { FormEvent, JSX } from 'react';
 import './modal.scss';
 import { config } from '../model/config';
-import { close, useAppDispatch, useAppSelector } from 'shared/store';
-import { selectIsOpen } from 'shared/store/modalSlice';
+import { close, useAppDispatch, useAppSelector } from 'shared/state';
+import { selectIsOpen } from 'shared/state/slices/modalSlice';
 
 export const BasicModal = (): JSX.Element => {
   const dispatch = useAppDispatch();

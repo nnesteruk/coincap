@@ -3,7 +3,7 @@ import { JSX } from 'react';
 import { Crypta } from '../model/crypta.type';
 import { AddCircle } from '@mui/icons-material';
 import './table.scss';
-import { open, useAppDispatch } from 'shared/store';
+import { open, useAppDispatch } from 'shared/state';
 
 export const TableValue = ({ crypta }: { crypta: Crypta }): JSX.Element => {
   const dispatch = useAppDispatch();

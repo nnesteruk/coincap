@@ -5,4 +5,4 @@ export {
   selectError,
   selectIsLoading,
   selectItem,
-} from './model/cryptaSlice';
+} from '../../shared/state/slices/cryptaSlice';

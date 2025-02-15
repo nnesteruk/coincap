@@ -4,5 +4,5 @@ export {
   useAppDispatch,
   useAppSelector,
   createAppAsyncThunk,
-} from './redux.hooks';
-export { open, close, selectIsOpen } from './modalSlice';
+} from './hooks/redux.hooks';
+export { open, close, selectIsOpen } from './slices/modalSlice';

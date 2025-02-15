@@ -5,26 +5,8 @@ import {
   TableHead,
   TableRow,
 } from '@mui/material';
-import { ReactNode } from 'react';
+import { TableProps } from 'shared/types';
 
-export type ColumType<T> = {
-  key: keyof T;
-  label: string;
-  attributes?: Partial<{
-    align: 'center' | 'left' | 'right';
-    className: string;
-    onClick: () => void;
-  }>;
-  reactNode?: (value?: number) => ReactNode;
-};
-type TableProps<T extends Record<string, any>> = {
-  columns: ColumType<T>[];
-  data: T[];
-  tableHeadClassName?: string;
-  tableHeadRowClassName?: string;
-  tableBodyClassName?: string;
-  tableRowBodyClassName?: string;
-};
 export const TableComponent = <T extends Record<string, any>>({
   columns,
   data,
@@ -38,7 +20,7 @@ export const TableComponent = <T extends Record<string, any>>({
       <TableHead className={tableHeadClassName}>
         <TableRow className={tableHeadRowClassName}>
           {columns.map((item) => (
-            <TableCell key={String(item.key)} {...item.attributes}>
+            <TableCell key={String(item.key)} align={item.attributes?.align}>
               {item.label}
             </TableCell>
           ))}

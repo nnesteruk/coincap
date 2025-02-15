@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { rootReducer } from './store';
+import { rootReducer } from '../store';
 
 const initialState: { isOpen: boolean } = {
   isOpen: false,

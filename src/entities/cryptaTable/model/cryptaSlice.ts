@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { CryptaSliceInitialState } from './crypta.type';
 import { fetchGetData } from '../api';
-import { RootState } from 'shared/store';
 import { rootReducer } from 'shared/store/store';
 
 const initialState: CryptaSliceInitialState = {

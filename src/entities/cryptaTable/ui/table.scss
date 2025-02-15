@@ -13,9 +13,9 @@
   &__row-head {
     & th {
       color: var(--color-pink);
-      &[align='left'] {
-        text-align: left;
-      }
+      // &[align='left'] {
+      //   text-align: left;
+      // }
     }
   }
   &__body {
@@ -60,14 +60,10 @@
   &__cell--vwap {
   }
   &__cell--change {
-    &.MuiTableCell-root {
-      color: var(--color-green-dark);
-    }
+    color: var(--color-green-dark);
   }
   &__cell--change_red {
-    &.MuiTableCell-root {
-      color: var(--color-red);
-    }
+    color: var(--color-red);
   }
   &__cell--marketcap {
   }

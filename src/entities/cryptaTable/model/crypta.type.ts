@@ -9,6 +9,7 @@ export type Crypta = {
   volumeUsd24Hr: string;
   vwap24Hr: string;
   priceUsd: string;
+  plus?: string;
 };
 
 export type CryptaSliceInitialState = {

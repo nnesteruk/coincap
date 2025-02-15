@@ -1,9 +1,6 @@
 import { ColumType } from 'shared/types';
 import { useFormatNumbers } from '../../../shared/hooks/useFormatNumber';
 import { Crypta } from './crypta.type';
-import { AddCircle } from '@mui/icons-material';
-import { open, useAppDispatch } from 'shared/state';
-import { useCallback } from 'react';
 import { IconPlus } from '../ui/IconPlus';
 
 const { fixed, formateMarketCap } = useFormatNumbers();
@@ -84,8 +81,8 @@ export const columns: ColumType<Crypta>[] = [
       align: 'center',
       className: 'crypta-table__cell crypta-table__cell--action',
     },
-    reactNode() {
-      return <IconPlus />;
+    reactNode(_, row) {
+      return <IconPlus item={row} />;
     },
   },
 ];

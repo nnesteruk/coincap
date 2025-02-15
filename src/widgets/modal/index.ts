@@ -1,1 +1,1 @@
-export { BasicModal } from './ui/BasicModal';
+export { MyModal } from './ui/MyModal';

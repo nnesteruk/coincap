@@ -8,7 +8,7 @@ export type ColumType<T> = {
     className: string;
     onClick: () => void;
   }>;
-  reactNode?: (value?: number) => ReactNode;
+  reactNode?: (value: number, row: any) => ReactNode;
 };
 export type TableProps<T extends Record<string, any>> = {
   columns: ColumType<T>[];

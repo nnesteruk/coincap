@@ -1,7 +1,7 @@
 import './table.scss';
 import { CryptaTableProps } from '../model/crypta.type';
 import { FC } from 'react';
-import { TableComponent } from 'shared/ui';
+import { TableComponent } from 'shared/ui/tableComponent';
 import { columns } from '../model/columns';
 
 export const CryptaTable: FC<CryptaTableProps> = ({ currentItems }) => {

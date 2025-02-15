@@ -31,7 +31,9 @@ export const TableComponent = <T extends Record<string, any>>({
           <TableRow key={item.id} className={tableRowBodyClassName}>
             {columns.map((col) => (
               <TableCell key={String(col.key)} {...col.attributes}>
-                {col.reactNode ? col.reactNode(item[col.key]) : item[col.key]}
+                {col.reactNode
+                  ? col.reactNode(item[col.key], item)
+                  : item[col.key]}
               </TableCell>
             ))}
           </TableRow>

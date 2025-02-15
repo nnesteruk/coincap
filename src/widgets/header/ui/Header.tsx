@@ -1,13 +1,19 @@
 import { AppBar, IconButton, Typography } from '@mui/material';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import './header.scss';
-import { useAppSelector } from 'shared/state';
-import { selectTopThree } from 'shared/state/slices/cryptaSlice';
+import { open, useAppDispatch, useAppSelector } from 'shared/state';
+import { selectSuma, selectTopThree } from 'shared/state/slices/cryptaSlice';
 import { useFormatNumbers } from 'shared/hooks';
 
 export const Header = () => {
+  const suma = useAppSelector(selectSuma);
+  const dispatch = useAppDispatch();
   const topThree = useAppSelector(selectTopThree);
   const { fixed } = useFormatNumbers();
+  const handleOpen = () => {
+    dispatch(open({ type: 'case', data: null }));
+  };
+  console.log(suma);
 
   return (
     <AppBar position="fixed" className="header">
@@ -24,12 +30,12 @@ export const Header = () => {
           </div>
         </div>
         <div className="header__section header__section-second">
-          <IconButton>
+          <IconButton onClick={handleOpen}>
             <WorkOutlineIcon />
           </IconButton>
           <div>
             <Typography>Итого:</Typography>
-            <p>Цена USD</p>
+            <p>{suma ? fixed(String(suma)) : 0} $</p>
           </div>
         </div>
       </div>

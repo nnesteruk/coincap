@@ -12,10 +12,15 @@ export type Crypta = {
   plus?: string;
 };
 
+export type CryptaData = Pick<Crypta, 'name' | 'priceUsd'> & {
+  count: number;
+  suma: number;
+};
 export type CryptaSliceInitialState = {
   crypta: Crypta[];
   isLoading: boolean;
   error: string;
+  data: CryptaData[] | null;
 };
 
 export type CryptaTableProps = {

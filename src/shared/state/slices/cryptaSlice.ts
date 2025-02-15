@@ -7,12 +7,21 @@ const initialState: CryptaSliceInitialState = {
   crypta: [],
   isLoading: false,
   error: '',
+  data: null,
 };
 
 export const cryptaSlice = createSlice({
   name: 'crypta',
   initialState,
-  reducers: {},
+  reducers: {
+    addData: (state, action) => {
+      if (!state.data) {
+        state.data = [action.payload];
+      } else {
+        state.data.push(action.payload);
+      }
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchGetData.pending, (state) => {
@@ -33,12 +42,21 @@ export const cryptaSlice = createSlice({
     selectItem: (state) => state.crypta,
     selectError: (state) => state.error,
     selectIsLoading: (state) => state.isLoading,
-    selectTopThree: (state) => {
-      return state.crypta.slice(0, 3);
+    selectTopThree: (state) => state.crypta.slice(0, 3),
+    selectSuma: (state) => {
+      return state.data?.reduce((result, item) => {
+        return (result = result + Number(item.suma));
+      }, 0);
     },
   },
 }).injectInto(rootReducer);
 
 export const { reducer } = cryptaSlice;
-export const { selectItem, selectIsLoading, selectError, selectTopThree } =
-  cryptaSlice.selectors;
+export const { addData } = cryptaSlice.actions;
+export const {
+  selectItem,
+  selectIsLoading,
+  selectError,
+  selectTopThree,
+  selectSuma,
+} = cryptaSlice.selectors;

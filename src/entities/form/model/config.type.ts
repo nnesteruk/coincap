@@ -4,6 +4,6 @@ export type FormData = {
 export type Config = {
   placeholder: string;
   required: boolean;
-  pattern?: string;
+  pattern?: RegExp;
   name: keyof FormData;
 };

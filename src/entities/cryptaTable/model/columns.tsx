@@ -60,7 +60,7 @@ export const columns: ColumType<Crypta>[] = [
       className: 'crypta-table__cell crypta-table__cell--marketcap',
     },
     reactNode(value) {
-      return `${formateMarketCap(String(value))} $`;
+      return `${formateMarketCap(String(value))} млрд. $`;
     },
   },
   {

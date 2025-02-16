@@ -12,7 +12,7 @@ export type ColumType<T> = {
 };
 export type TableProps<T extends Record<string, any>> = {
   columns: ColumType<T>[];
-  data: T[];
+  data: T[] | null;
   tableHeadClassName?: string;
   tableHeadRowClassName?: string;
   tableBodyClassName?: string;

@@ -5,4 +5,15 @@ export {
   useAppSelector,
   createAppAsyncThunk,
 } from './hooks/redux.hooks';
-export { open, close, selectIsOpen } from './slices/modalSlice';
+export { open, close, selectIsOpen, selectType } from './slices/modalSlice';
+export {
+  addData,
+  deleteData,
+  cryptaSlice,
+  selectError,
+  selectIsLoading,
+  selectItem,
+  selectSuma,
+  selectTopThree,
+  selectData,
+} from './slices/cryptaSlice';

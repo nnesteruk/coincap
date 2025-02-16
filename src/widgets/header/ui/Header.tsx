@@ -2,18 +2,22 @@ import { AppBar, IconButton, Typography } from '@mui/material';
 import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
 import './header.scss';
 import { open, useAppDispatch, useAppSelector } from 'shared/state';
-import { selectSuma, selectTopThree } from 'shared/state/slices/cryptaSlice';
+import {
+  selectData,
+  selectSuma,
+  selectTopThree,
+} from 'shared/state/slices/cryptaSlice';
 import { useFormatNumbers } from 'shared/hooks';
 
 export const Header = () => {
   const suma = useAppSelector(selectSuma);
+  const cryptaData = useAppSelector(selectData);
   const dispatch = useAppDispatch();
   const topThree = useAppSelector(selectTopThree);
   const { fixed } = useFormatNumbers();
   const handleOpen = () => {
-    dispatch(open({ type: 'case', data: null }));
+    dispatch(open({ type: 'portfolio', data: cryptaData }));
   };
-  console.log(suma);
 
   return (
     <AppBar position="fixed" className="header">

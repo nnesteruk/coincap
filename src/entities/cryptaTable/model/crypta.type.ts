@@ -12,10 +12,12 @@ export type Crypta = {
   plus?: string;
 };
 
-export type CryptaData = Pick<Crypta, 'name' | 'priceUsd'> & {
+export type CryptaData = Pick<Crypta, 'name' | 'priceUsd' | 'id'> & {
   count: number;
   suma: number;
+  delete?: string;
 };
+
 export type CryptaSliceInitialState = {
   crypta: Crypta[];
   isLoading: boolean;

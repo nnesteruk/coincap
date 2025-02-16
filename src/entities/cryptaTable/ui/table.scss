@@ -66,6 +66,7 @@
     color: var(--color-red);
   }
   &__cell--marketcap {
+    white-space: pre;
   }
   &__cell--price {
   }

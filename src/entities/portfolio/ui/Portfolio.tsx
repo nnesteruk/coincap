@@ -41,18 +41,22 @@ export const Portfolio = () => {
     {
       key: 'delete',
       label: '',
-      attributes: { align: 'center' },
+      attributes: { align: 'center', className: 'portfolio__button' },
       reactNode(_, row) {
         return <IconCros item={row} />;
       },
     },
   ];
   return (
-    <div className="porfolio">
+    <div className="portfolio">
       <h1>Портфель</h1>
-      <TableComponent columns={columns} data={data} />
+      <TableComponent
+        columns={columns}
+        data={data}
+        tableRowBodyClassName="portfolio__body-row"
+      />
       <p>
-        Итого: <span>{suma ? fixed(String(suma)) : 0}$</span>
+        Итого: <span>{suma ? fixed(String(suma)) : 0} $</span>
       </p>
     </div>
   );

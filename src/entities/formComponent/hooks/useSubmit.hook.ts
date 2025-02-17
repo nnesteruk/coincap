@@ -2,7 +2,7 @@ import { CryptaData } from 'entities/cryptaTable/model/crypta.type';
 import { FormEvent } from 'react';
 import { addData, close, useAppDispatch } from 'shared/state';
 
-export const useSubmit = () => {
+export const useSubmit = (currency: CryptaData | null) => {
   const dispatch = useAppDispatch();
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
@@ -11,10 +11,7 @@ export const useSubmit = () => {
       new FormData(event.target as HTMLFormElement),
     );
     const count = Number(data.count);
-    const currencyString = localStorage.getItem('currency');
-    if (!currencyString) return;
-
-    const currency: CryptaData = JSON.parse(currencyString);
+    if (!currency) return;
 
     dispatch(
       addData({

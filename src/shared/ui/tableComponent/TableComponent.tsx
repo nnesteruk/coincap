@@ -14,6 +14,7 @@ export const TableComponent = <T extends Record<string, any>>({
   tableHeadRowClassName,
   tableBodyClassName,
   tableRowBodyClassName,
+  onRowClick,
 }: TableProps<T>) => {
   return (
     <Table>
@@ -28,7 +29,10 @@ export const TableComponent = <T extends Record<string, any>>({
       </TableHead>
       <TableBody className={tableBodyClassName}>
         {data?.map((item) => (
-          <TableRow key={item.id} className={tableRowBodyClassName}>
+          <TableRow
+            key={item.id}
+            className={tableRowBodyClassName}
+            onClick={() => onRowClick?.(item)}>
             {columns.map((col) => (
               <TableCell key={String(col.key)} {...col.attributes}>
                 {col.reactNode

@@ -9,8 +9,8 @@ export type Crypta = {
   volumeUsd24Hr: string;
   vwap24Hr: string;
   priceUsd: string;
-  plus?: string;
 };
+export type CryptaWithPlus = Crypta & { plus?: string };
 
 export type CryptaData = Pick<Crypta, 'name' | 'priceUsd' | 'id'> & {
   count: number;

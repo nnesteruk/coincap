@@ -1,13 +1,25 @@
-.porfolio {
+.modal-size {
+  width: 50vw;
+  height: 50vh !important;
+}
+.portfolio {
   h1 {
     font-size: 22px;
     margin: 10px 0px;
   }
   p {
     padding: 20px 0px;
+    span {
+      font-size: 17px;
+      font-weight: 500;
+    }
   }
-}
-.modal-size {
-  width: 50vw;
-  height: 50vh !important;
+  &__body-row {
+    td {
+      font-size: 16px;
+    }
+    button {
+      color: var(--color-black);
+    }
+  }
 }

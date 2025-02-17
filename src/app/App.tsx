@@ -1,11 +1,11 @@
 import { FC } from 'react';
 import { Providers } from './providers';
-import { TablePage } from 'pages/index';
+import { RoutesProvider } from './routes';
 
 export const App: FC = () => {
   return (
     <Providers>
-      <TablePage />
+      <RoutesProvider />
     </Providers>
   );
 };

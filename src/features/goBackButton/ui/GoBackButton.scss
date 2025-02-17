@@ -1,0 +1,15 @@
+.back-button {
+  border: 2px solid var(--color-pink-bright);
+  background-color: var(--color-white);
+  border-radius: 20px;
+  padding: 12px 40px;
+  cursor: pointer;
+  &:hover {
+    color: var(--color-white);
+    background-color: var(--color-pink-bright);
+    border-color: var(--color-black-with-opacity);
+  }
+  &:active {
+    transform: scale(0.95);
+  }
+}

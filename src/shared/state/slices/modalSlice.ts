@@ -3,11 +3,11 @@ import { rootReducer } from '../store';
 
 const initialState: {
   isOpen: boolean;
-  type: 'form' | 'portfolio';
+  type: 'form' | 'portfolio' | '';
   data: unknown;
 } = {
   isOpen: false,
-  type: 'form',
+  type: '',
   data: null,
 };
 export const modalSlice = createSlice({
@@ -21,7 +21,7 @@ export const modalSlice = createSlice({
     },
     close: (state) => {
       state.isOpen = false;
-      state.type = 'form';
+      state.type = '';
       state.data = null;
     },
   },

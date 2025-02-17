@@ -1,9 +1,9 @@
 import axios from 'axios';
-import { env } from 'shared/config/config';
+import { API_KEY, API_URL } from 'shared/config/config';
 
 export const instance = axios.create({
-  baseURL: `${env.API_URL}`,
+  baseURL: `${API_URL}`,
   headers: {
-    Authorization: `Bearer ${env.API_KEY}`,
+    Authorization: `Bearer ${API_KEY}`,
   },
 });

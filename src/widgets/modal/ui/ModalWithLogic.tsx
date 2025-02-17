@@ -1,4 +1,4 @@
-import { FormComponent } from 'entities/form';
+import { FormComponent } from 'entities/formComponent';
 import { Portfolio } from 'entities/portfolio';
 import { PropsWithChildren } from 'react';
 import {

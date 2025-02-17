@@ -1,0 +1,1 @@
+export { CryptaName } from './CryptaName';

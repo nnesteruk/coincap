@@ -3,6 +3,7 @@ import './cryptaPage.scss';
 import { GoBackButton } from 'features/goBackButton';
 import { CryptaName } from 'widgets/cryptaName';
 import { CryptaCard } from 'entities/cryptaCard';
+import { CryptaGraphic } from 'widgets/CryptaGraphic';
 export const CryptaPage = () => {
   return (
     <div className="container">
@@ -12,6 +13,9 @@ export const CryptaPage = () => {
         </div>
         <FormComponent />
         <CryptaCard />
+        <div className="crypta-page__graphic">
+          <CryptaGraphic />
+        </div>
         <div className="crypta-page__button">
           <GoBackButton />
         </div>

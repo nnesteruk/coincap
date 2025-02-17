@@ -1,4 +1,4 @@
-import { CryptaData } from 'entities/cryptaTable/model/crypta.type';
+import { CryptaData } from 'shared/types/crypta.type';
 import { FormEvent } from 'react';
 import { addData, close, useAppDispatch } from 'shared/state';
 

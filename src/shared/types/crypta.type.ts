@@ -17,12 +17,17 @@ export type CryptaData = Pick<Crypta, 'name' | 'priceUsd' | 'id'> & {
   suma: number;
   delete?: string;
 };
+export type CryptaHistory = Pick<Crypta, 'priceUsd'> & {
+  time: number;
+  date: string;
+};
 
 export type CryptaSliceInitialState = {
   crypta: Crypta[];
   isLoading: boolean;
   error: string;
   data: CryptaData[] | null;
+  history: CryptaHistory[] | null;
 };
 
 export type CryptaTableProps = {

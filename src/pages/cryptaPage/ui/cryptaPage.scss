@@ -1,11 +1,15 @@
 .crypta-page {
   margin-top: 80px;
+  padding: 20px 10px;
   display: grid;
-  justify-content: center;
-  // grid-template-rows: repeat(2, 1fr);
+  background-color: var(--color-white);
+  border-radius: 40px;
   &__title {
   }
   &__button {
     margin: 20px auto 0px;
+  }
+  &__graphic {
+    margin-top: 20px;
   }
 }

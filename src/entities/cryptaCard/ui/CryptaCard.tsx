@@ -44,8 +44,9 @@ export const CryptaCard = () => {
         return `${(numValue / 1e6).toFixed(2)} млн $`;
       case numValue >= 1e3:
         return `${numValue.toFixed(2)} $`;
+
       default:
-        return numValue.toString();
+        return `${numValue.toFixed(2).toString()} $`;
     }
   };
 
@@ -66,5 +67,12 @@ export const CryptaCard = () => {
       label: 'Данные о валюте',
     },
   ];
-  return <TableComponent columns={columns} data={tableData} />;
+  return (
+    <TableComponent
+      columns={columns}
+      data={tableData}
+      tableBodyClassName="card__body"
+      tableHeadClassName="card__head"
+    />
+  );
 };

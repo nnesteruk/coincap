@@ -1,6 +1,6 @@
 import { ColumType } from 'shared/types';
 import { useFormatNumbers } from '../../../shared/hooks/useFormatNumber';
-import { CryptaWithPlus } from './crypta.type';
+import { CryptaWithPlus } from '../../../shared/types/crypta.type';
 import { IconPlus } from '../ui/IconPlus';
 import { FormEventHandler } from 'react';
 

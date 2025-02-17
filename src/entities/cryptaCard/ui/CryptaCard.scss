@@ -4,11 +4,22 @@
 .green {
   color: var(--color-green-dark);
 }
-
-.card__link {
-  color: var(--color-pink);
-  cursor: pointer;
-  &:hover {
-    color: var(--color-black);
+.card {
+  &__head {
+    th {
+      font-size: 16px;
+    }
+  }
+  &__body {
+    td {
+      font-size: 16px;
+    }
+  }
+  &__link {
+    color: var(--color-pink);
+    cursor: pointer;
+    &:hover {
+      color: var(--color-black);
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { CryptaData } from 'entities/cryptaTable/model/crypta.type';
+import { CryptaData } from 'shared/types/crypta.type';
 import { useFormatNumbers } from 'shared/hooks';
 import { selectData, selectSuma, useAppSelector } from 'shared/state';
 import { ColumType } from 'shared/types';

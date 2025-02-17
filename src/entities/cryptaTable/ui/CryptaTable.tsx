@@ -1,5 +1,5 @@
 import './table.scss';
-import { Crypta, CryptaTableProps } from '../model/crypta.type';
+import { Crypta, CryptaTableProps } from '../../../shared/types/crypta.type';
 import { FC } from 'react';
 import { TableComponent } from 'shared/ui/tableComponent';
 import { columns } from '../model/columns';

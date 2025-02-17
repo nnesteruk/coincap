@@ -16,4 +16,5 @@ export {
   selectSuma,
   selectTopThree,
   selectData,
+  selectHistory,
 } from './slices/cryptaSlice';

@@ -1,4 +1,3 @@
-import { Crypta } from 'entities/cryptaTable/model/crypta.type';
 import { ReactNode } from 'react';
 
 export type ColumType<T> = {
@@ -7,7 +6,7 @@ export type ColumType<T> = {
   attributes?: Partial<{
     align: 'center' | 'left' | 'right';
     className: string;
-    onClick: (e: Event) => void;
+    onClick: (e?: React.MouseEvent<HTMLTableCellElement>) => void;
   }>;
   reactNode?: (value: number, row: any) => ReactNode;
 };

@@ -1,4 +1,4 @@
-import { Crypta } from 'entities/cryptaTable/model/crypta.type';
+import { Crypta } from 'shared/types/crypta.type';
 import { useLocation } from 'react-router';
 
 export const useStateLocation = () => {

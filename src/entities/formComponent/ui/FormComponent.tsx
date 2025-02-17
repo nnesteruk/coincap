@@ -1,7 +1,7 @@
 import { config } from '../model/config';
 import './modal.scss';
 import { useSubmit } from '../hooks/useSubmit.hook';
-import { CryptaData } from 'entities/cryptaTable/model/crypta.type';
+import { CryptaData } from 'shared/types/crypta.type';
 import { selectType, useAppSelector } from 'shared/state';
 
 export const FormComponent = () => {

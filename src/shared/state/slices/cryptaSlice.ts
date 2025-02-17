@@ -1,16 +1,19 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import {
+  Crypta,
   CryptaData,
+  CryptaHistory,
   CryptaSliceInitialState,
-} from '../../../entities/cryptaTable/model/crypta.type';
-import { fetchGetData } from '../../../entities/cryptaTable/api';
+} from 'shared/types/crypta.type';
 import { rootReducer } from 'shared/state/store';
+import { fetchGetData, fetchGetHistory } from 'shared/api/fetchCryptaApi';
 
 const initialState: CryptaSliceInitialState = {
   crypta: [],
   isLoading: false,
   error: '',
   data: null,
+  history: null,
 };
 
 export const cryptaSlice = createSlice({
@@ -46,12 +49,31 @@ export const cryptaSlice = createSlice({
         state.isLoading = true;
         state.error = '';
       })
-      .addCase(fetchGetData.fulfilled, (state, action) => {
+      .addCase(
+        fetchGetData.fulfilled,
+        (state, action: PayloadAction<Crypta[]>) => {
+          state.isLoading = false;
+          state.crypta = action.payload || [];
+          state.error = '';
+        },
+      )
+      .addCase(fetchGetData.rejected, (state, action) => {
         state.isLoading = false;
-        state.crypta = action.payload || [];
+        state.error = `${action.payload}`;
+      })
+      .addCase(fetchGetHistory.pending, (state) => {
+        state.isLoading = true;
         state.error = '';
       })
-      .addCase(fetchGetData.rejected, (state, action) => {
+      .addCase(
+        fetchGetHistory.fulfilled,
+        (state, action: PayloadAction<CryptaHistory[]>) => {
+          state.isLoading = false;
+          state.history = action.payload || [];
+          state.error = '';
+        },
+      )
+      .addCase(fetchGetHistory.rejected, (state, action) => {
         state.isLoading = false;
         state.error = `${action.payload}`;
       });
@@ -67,6 +89,7 @@ export const cryptaSlice = createSlice({
       }, 0);
     },
     selectData: (state) => state.data,
+    selectHistory: (state) => state.history,
   },
 }).injectInto(rootReducer);
 
@@ -79,4 +102,5 @@ export const {
   selectTopThree,
   selectSuma,
   selectData,
+  selectHistory,
 } = cryptaSlice.selectors;

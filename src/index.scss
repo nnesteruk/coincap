@@ -13,7 +13,15 @@
   --color-green-dark: #007c00;
   --color-red: red;
 }
+
 body {
   background-color: var(--color-white-some-gray);
   height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1264px;
+  padding: 0 32px;
+  margin: 0 auto;
 }

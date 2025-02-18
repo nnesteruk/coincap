@@ -8,13 +8,13 @@ export const TablePage = () => {
     usePaginationItems(crypta || []);
 
   return (
-    <>
+    <div className="container">
       <CryptaTable currentItems={currentItems} />
       <Pagination
         totalPages={totalPages}
         currentPage={currentPage}
         handlePage={handlePage}
       />
-    </>
+    </div>
   );
 };

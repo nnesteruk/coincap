@@ -10,6 +10,17 @@
     justify-items: start;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+
+    @media (max-width: 1050px) {
+      p {
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 670px) {
+      p {
+        font-size: 12px;
+      }
+    }
   }
 
   &__subtitle {
@@ -26,10 +37,6 @@
     p:first-child {
       font-weight: 600;
     }
-    // p:last-child {
-    //   color: var(--color-pink);
-    //   font-weight: 500;
-    // }
   }
   &__section {
     &-first {
@@ -57,6 +64,11 @@
       button svg {
         color: var(--color-white-some-gray);
         font-size: 30px;
+      }
+      @media (max-width: 670px) {
+        & button svg {
+          font-size: 22px;
+        }
       }
     }
   }

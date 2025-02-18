@@ -8,16 +8,65 @@
     display: table;
     border-collapse: collapse;
   }
-  &__head {
+  @media (max-width: 985px) {
+    th,
+    td {
+      padding: 12px;
+      font-size: 12px;
+    }
   }
+  @media (max-width: 840px) {
+    td,
+    th {
+      font-size: 12px;
+    }
+    svg {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 768px) {
+    .crypta-table__body {
+      td {
+        // Изменяем выравнивание данных в таблице
+        text-align: center;
+        padding: 8px 5px;
+      }
+    }
+  }
+  @media (max-width: 660px) {
+    th:nth-child(6),
+    td:nth-child(6) {
+      display: none;
+    }
+    svg {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 560px) {
+    th:nth-child(3),
+    td:nth-child(3) {
+      display: none;
+    }
+  }
+  @media (max-width: 470px) {
+    th:nth-child(4),
+    td:nth-child(4) {
+      display: none;
+    }
+    svg {
+      font-size: 22px;
+    }
+  }
+
   &__row-head {
     & th {
       color: var(--color-pink);
       :hover {
-        font-weight: 400 !important;
+        font-weight: 400;
       }
     }
   }
+
   &__body {
     & th,
     td {
@@ -45,8 +94,7 @@
       transition: all 100ms ease-in-out;
     }
   }
-  &__cell--rank {
-  }
+
   &__cell--symbol {
     &.MuiTableCell-root {
       color: var(--color-pink);
@@ -57,8 +105,7 @@
       font-weight: 600;
     }
   }
-  &__cell--vwap {
-  }
+
   &__cell--change {
     color: var(--color-green-dark);
   }
@@ -68,8 +115,7 @@
   &__cell--marketcap {
     white-space: pre;
   }
-  &__cell--price {
-  }
+
   &__cell--action {
     &:active {
       box-shadow: none;

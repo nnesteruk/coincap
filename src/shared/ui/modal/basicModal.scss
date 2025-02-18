@@ -1,4 +1,8 @@
 .modal {
+  display: inline-block; // Автоматическая ширина по контенту
+  width: 80vw;
+  max-width: 1200px; // Ограничение максимальной ширины
+  min-width: 300px; // Минимальная ширина для удобства
   position: absolute;
   top: 50%;
   left: 50%;
@@ -8,8 +12,21 @@
   background-color: white;
   text-align: center;
   padding: 20px;
+}
+@media (max-width: 1440px) {
+  .modal {
+    max-width: 1000px;
+  }
+}
 
-  display: inline-block; // Автоматическая ширина по контенту
-  max-width: 90vw; // Ограничение максимальной ширины
-  min-width: 300px; // Минимальная ширина для удобства
+@media (max-width: 1024px) {
+  .modal {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    max-width: 90vw;
+  }
 }

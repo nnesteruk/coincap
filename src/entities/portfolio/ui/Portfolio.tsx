@@ -56,7 +56,10 @@ export const Portfolio = () => {
         tableRowBodyClassName="portfolio__body-row"
       />
       <p>
-        Итого: <span>{suma ? fixed(String(suma)) : 0} $</span>
+        Итого:{' '}
+        <span className="portfolio__suma">
+          {suma ? fixed(String(suma)) : 0} $
+        </span>
       </p>
     </div>
   );

@@ -1,5 +1,5 @@
 import { config } from '../model/config';
-import './modal.scss';
+import './formComponent.scss';
 import { useSubmit } from '../hooks/useSubmit.hook';
 import { CryptaData } from 'shared/types/crypta.type';
 import { selectType, useAppSelector } from 'shared/state';

@@ -1,6 +1,5 @@
 import { FormComponent } from 'entities/formComponent';
 import { Portfolio } from 'entities/portfolio';
-import { PropsWithChildren } from 'react';
 import {
   close,
   selectIsOpen,
@@ -17,7 +16,7 @@ export const ModalWithLogic = () => {
     dispatch(close());
   };
   const type = useAppSelector(selectType);
-  const className = type === 'portfolio' ? 'modal-size' : '';
+  const className = type === 'portfolio' ? 'modal-size' : 'modal__form-size';
 
   return (
     <BasicModal open={open} close={handleClose} className={className}>

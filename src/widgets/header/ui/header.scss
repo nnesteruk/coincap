@@ -16,6 +16,11 @@
         font-size: 14px;
       }
     }
+    @media (max-width: 840px) {
+      p {
+        font-size: 14px;
+      }
+    }
     @media (max-width: 670px) {
       p {
         font-size: 12px;
@@ -51,6 +56,12 @@
       p:last-child {
         color: var(--color-pink);
         font-size: 18px;
+        @media (max-width: 840px) {
+          font-size: 15px;
+        }
+        @media (max-width: 450px) {
+          // font-size: 14px;
+        }
       }
 
       button {
@@ -65,9 +76,20 @@
         color: var(--color-white-some-gray);
         font-size: 30px;
       }
+      @media (max-width: 840px) {
+        button svg {
+          font-size: 25px;
+        }
+      }
+
       @media (max-width: 670px) {
-        & button svg {
-          font-size: 22px;
+        button svg {
+          font-size: 23px;
+        }
+      }
+      @media (max-width: 450px) {
+        button svg {
+          font-size: 20px;
         }
       }
     }

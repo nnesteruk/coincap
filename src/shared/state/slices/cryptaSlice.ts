@@ -23,18 +23,16 @@ export const cryptaSlice = createSlice({
     addData: (state, action: PayloadAction<CryptaData>) => {
       if (!state.data) {
         state.data = [action.payload];
-      } else if (state.data.length === 0) {
-        state.data.push(action.payload);
       } else {
-        state.data = state.data.map((item) => {
-          return item.id === action.payload.id
-            ? {
-                ...item,
-                count: item.count + action.payload.count,
-                suma: item.suma + action.payload.suma,
-              }
-            : item;
-        });
+        const existItem = state.data.find(
+          (item) => item.id === action.payload.id,
+        );
+        if (existItem) {
+          existItem.count += action.payload.count;
+          existItem.suma += action.payload.suma;
+        } else {
+          state.data.push(action.payload);
+        }
       }
     },
     deleteData: (state, action: PayloadAction<CryptaData>) => {

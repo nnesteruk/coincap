@@ -27,6 +27,7 @@ export const TableComponent = <T extends Record<string, any>>({
           ))}
         </TableRow>
       </TableHead>
+
       <TableBody className={tableBodyClassName}>
         {data?.map((item) => (
           <TableRow

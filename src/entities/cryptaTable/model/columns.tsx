@@ -2,7 +2,6 @@ import { ColumType } from 'shared/types';
 import { useFormatNumbers } from '../../../shared/hooks/useFormatNumber';
 import { CryptaWithPlus } from '../../../shared/types/crypta.type';
 import { IconPlus } from '../ui/IconPlus';
-import { FormEventHandler } from 'react';
 
 const { fixed, formateMarketCap } = useFormatNumbers();
 export const columns: ColumType<CryptaWithPlus>[] = [
@@ -81,7 +80,7 @@ export const columns: ColumType<CryptaWithPlus>[] = [
     attributes: {
       align: 'center',
       className: 'crypta-table__cell crypta-table__cell--action',
-      onClick: (e: Event) => e.stopPropagation(),
+      onClick: (e) => e?.stopPropagation(),
     },
     reactNode(_, row) {
       return <IconPlus item={row} />;

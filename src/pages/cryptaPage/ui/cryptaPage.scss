@@ -4,12 +4,15 @@
   display: grid;
   background-color: var(--color-white);
   border-radius: 40px;
-  &__title {
-  }
   &__button {
     margin: 20px auto 0px;
   }
   &__graphic {
     margin-top: 20px;
+    @media (max-width: 500px) {
+      svg {
+        padding: 10px 10px 0px 0px;
+      }
+    }
   }
 }

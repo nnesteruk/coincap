@@ -8,11 +8,14 @@ import {
 import { rootReducer } from 'shared/state/store';
 import { fetchGetData, fetchGetHistory } from 'shared/api/fetchCryptaApi';
 
+const portfolio = localStorage.getItem('portfolio');
+const parsedPortfolio = portfolio ? JSON.parse(portfolio) : null;
+
 const initialState: CryptaSliceInitialState = {
   crypta: [],
   isLoading: false,
   error: '',
-  data: null,
+  data: parsedPortfolio,
   history: null,
 };
 
@@ -23,6 +26,7 @@ export const cryptaSlice = createSlice({
     addData: (state, action: PayloadAction<CryptaData>) => {
       if (!state.data) {
         state.data = [action.payload];
+        localStorage.setItem('portfolio', JSON.stringify(state.data));
       } else {
         const existItem = state.data.find(
           (item) => item.id === action.payload.id,
@@ -30,14 +34,17 @@ export const cryptaSlice = createSlice({
         if (existItem) {
           existItem.count += action.payload.count;
           existItem.suma += action.payload.suma;
+          localStorage.setItem('portfolio', JSON.stringify(state.data));
         } else {
           state.data.push(action.payload);
+          localStorage.setItem('portfolio', JSON.stringify(state.data));
         }
       }
     },
     deleteData: (state, action: PayloadAction<CryptaData>) => {
       if (state.data) {
         state.data = state.data.filter((item) => item.id !== action.payload.id);
+        localStorage.setItem('portfolio', JSON.stringify(state.data));
       }
     },
   },
@@ -86,7 +93,9 @@ export const cryptaSlice = createSlice({
         return (result = result + Number(item.suma));
       }, 0);
     },
-    selectData: (state) => state.data,
+    selectData: (state) => {
+      return state.data;
+    },
     selectHistory: (state) => state.history,
   },
 }).injectInto(rootReducer);

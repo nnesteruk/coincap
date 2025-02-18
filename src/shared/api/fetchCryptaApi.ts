@@ -31,7 +31,7 @@ export const fetchGetData = createAppAsyncThunk<
 });
 
 export const fetchGetHistory = createAppAsyncThunk<CryptaHistory[], string>(
-  'historry',
+  'history',
   async (id, thunkApi) => {
     try {
       const { data } = await getCryptaApi.getHistory(id);

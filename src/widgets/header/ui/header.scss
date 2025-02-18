@@ -10,12 +10,6 @@
     justify-items: start;
     align-items: center;
     font-family: 'Roboto', sans-serif;
-
-    @media (max-width: 1050px) {
-      p {
-        font-size: 14px;
-      }
-    }
     @media (max-width: 840px) {
       p {
         font-size: 14px;
@@ -36,6 +30,9 @@
   &__titles {
     display: flex;
     gap: 15px;
+    @media (max-width: 375px) {
+      gap: 8px;
+    }
   }
   &__currency {
     text-align: center;
@@ -59,8 +56,8 @@
         @media (max-width: 840px) {
           font-size: 15px;
         }
-        @media (max-width: 450px) {
-          // font-size: 14px;
+        @media (max-width: 375px) {
+          font-size: 13px;
         }
       }
 
@@ -90,6 +87,11 @@
       @media (max-width: 450px) {
         button svg {
           font-size: 20px;
+        }
+      }
+      @media (max-width: 375px) {
+        button {
+          margin-right: 5px;
         }
       }
     }

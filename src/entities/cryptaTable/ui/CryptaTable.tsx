@@ -11,7 +11,7 @@ export const CryptaTable: FC<CryptaTableProps> = ({ currentItems }) => {
   const rowClick = (item: Crypta) => {
     navigate(`/${item.id}`, { state: item });
   };
-  const isLoading = useAppSelector(selectIsLoading);
+  const isLoading = useAppSelector(selectIsLoading); //!Проверить
   return (
     <div className="crypta-table">
       <TableComponent

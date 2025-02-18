@@ -8,11 +8,34 @@
   &__head {
     th {
       font-size: 16px;
+      &:nth-child(1) {
+        text-align: left;
+      }
+      text-align: right;
+    }
+    @media (max-width: 840px) {
+      th {
+        font-size: 14px;
+      }
     }
   }
   &__body {
     td {
       font-size: 16px;
+      &:nth-child(1) {
+        text-align: left;
+      }
+      text-align: right;
+    }
+    @media (max-width: 840px) {
+      td {
+        font-size: 14px;
+      }
+    }
+    @media (max-width: 500px) {
+      td {
+        padding: 10px;
+      }
     }
   }
   &__link {

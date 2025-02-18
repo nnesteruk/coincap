@@ -23,7 +23,6 @@ export const Header = () => {
     <AppBar position="fixed" className="header">
       <div className="header__container container">
         <div className="header__section header__section--first">
-          {/* <p className="header__subtitle">Популярные валюты:</p> */}
           <div className="header__titles">
             {topThree.map((val) => (
               <article className="header__currency" key={val.id}>

@@ -9,7 +9,6 @@ import { IconCros } from './IconCros';
 export const Portfolio = () => {
   const { fixed } = useFormatNumbers();
   const data = useAppSelector(selectData);
-  console.log('data', data);
   const suma = useAppSelector(selectSuma);
   const columns: ColumType<CryptaData>[] = [
     {

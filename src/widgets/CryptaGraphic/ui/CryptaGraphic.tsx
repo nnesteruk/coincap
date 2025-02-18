@@ -28,7 +28,7 @@ export const CryptaGraphic = () => {
   }));
   useEffect(() => {
     id && dispatch(fetchGetHistory(id));
-  }, [id]);
+  }, []);
 
   return (
     <ResponsiveContainer

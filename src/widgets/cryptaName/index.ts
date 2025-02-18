@@ -1,1 +1,1 @@
-export { CryptaName } from './CryptaName';
+export { CryptaName } from './ui/CryptaName';

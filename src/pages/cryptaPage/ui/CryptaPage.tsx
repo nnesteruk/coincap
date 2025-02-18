@@ -8,9 +8,7 @@ export const CryptaPage = () => {
   return (
     <div className="container">
       <div className="crypta-page">
-        <div className="crypta-page__title">
-          <CryptaName />
-        </div>
+        <CryptaName />
         <FormComponent />
         <CryptaCard />
         <div className="crypta-page__graphic">

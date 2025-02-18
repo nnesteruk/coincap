@@ -8,7 +8,6 @@ export const IconPlus = ({ item }: { item: Crypta }) => {
   const dispatch = useAppDispatch();
   const handleOpen = useCallback(() => {
     dispatch(open({ type: 'form', data: null }));
-    console.log(item);
     localStorage.setItem('currency', JSON.stringify({ ...item }));
   }, [dispatch]);
   return (

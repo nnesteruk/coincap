@@ -22,15 +22,6 @@ export const useSubmit = (currency: CryptaData | null) => {
         suma: count * Number(currency.priceUsd),
       }),
     );
-    // localStorage.setItem(
-    //   'newCurrency',
-    //   JSON.stringify({
-    //     name: currency.name,
-    //     price: currency?.priceUsd,
-    //     count: data.count,
-    //     suma: Number(data.count) * Number(currency?.priceUsd),
-    //   }),
-    // );
     dispatch(close());
   };
 

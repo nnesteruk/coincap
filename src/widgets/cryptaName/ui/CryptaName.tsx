@@ -1,5 +1,5 @@
-import { useStateLocation } from 'shared/hooks';
-import './Title.scss';
+import { useStateLocation } from "shared/hooks";
+import "./Title.scss";
 
 export const CryptaName = () => {
   const { currency } = useStateLocation();

@@ -1,5 +1,5 @@
-import { combineSlices, configureStore } from '@reduxjs/toolkit';
-import { logger } from 'redux-logger';
+import { combineSlices, configureStore } from "@reduxjs/toolkit";
+import { logger } from "redux-logger";
 
 export const rootReducer = combineSlices();
 

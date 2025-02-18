@@ -4,8 +4,8 @@ import {
   TableCell,
   TableHead,
   TableRow,
-} from '@mui/material';
-import { TableProps } from 'shared/types';
+} from "@mui/material";
+import { TableProps } from "shared/types";
 
 export const TableComponent = <T extends Record<string, any>>({
   columns,

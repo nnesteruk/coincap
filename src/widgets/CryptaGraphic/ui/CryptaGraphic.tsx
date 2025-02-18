@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useParams } from 'react-router';
+import { useEffect } from "react";
+import { useParams } from "react-router";
 import {
   LineChart,
   Line,
@@ -8,15 +8,15 @@ import {
   Tooltip,
   ResponsiveContainer,
   CartesianGrid,
-} from 'recharts';
-import { fetchGetHistory } from 'shared/api';
+} from "recharts";
+import { fetchGetHistory } from "shared/api";
 import {
   selectHistory,
   selectIsLoading,
   useAppDispatch,
   useAppSelector,
-} from 'shared/state';
-import './CryptaGraphic.scss';
+} from "shared/state";
+import "./CryptaGraphic.scss";
 export const CryptaGraphic = () => {
   const dispatch = useAppDispatch();
   const { id } = useParams();
@@ -27,14 +27,17 @@ export const CryptaGraphic = () => {
     priceUsd: parseFloat(item.priceUsd), // Преобразуем цену в число
   }));
   useEffect(() => {
-    id && dispatch(fetchGetHistory(id));
+    if (id) {
+      dispatch(fetchGetHistory(id));
+    }
   }, []);
 
   return (
     <ResponsiveContainer
       width="100%"
       height={300}
-      className="graphic__container">
+      className="graphic__container"
+    >
       {isLoading ? (
         <p>Идет загрузка...</p>
       ) : (

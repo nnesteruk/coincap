@@ -1,17 +1,17 @@
-import { createSlice } from '@reduxjs/toolkit';
-import { rootReducer } from '../store';
+import { createSlice } from "@reduxjs/toolkit";
+import { rootReducer } from "../store";
 
 const initialState: {
   isOpen: boolean;
-  type: 'form' | 'portfolio' | '';
+  type: "form" | "portfolio" | "";
   data: unknown;
 } = {
   isOpen: false,
-  type: '',
+  type: "",
   data: null,
 };
 export const modalSlice = createSlice({
-  name: 'modal',
+  name: "modal",
   initialState,
   reducers: {
     open: (state, action) => {
@@ -21,7 +21,7 @@ export const modalSlice = createSlice({
     },
     close: (state) => {
       state.isOpen = false;
-      state.type = '';
+      state.type = "";
       state.data = null;
     },
   },

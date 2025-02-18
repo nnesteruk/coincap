@@ -1,6 +1,6 @@
-import { Modal } from '@mui/material';
-import { JSX, PropsWithChildren } from 'react';
-import './basicModal.scss';
+import { Modal } from "@mui/material";
+import { JSX, PropsWithChildren } from "react";
+import "./basicModal.scss";
 
 type BasicModalProps = PropsWithChildren<{
   open: boolean;

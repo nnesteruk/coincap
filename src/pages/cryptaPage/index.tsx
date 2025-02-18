@@ -1,1 +1,1 @@
-export { CryptaPage } from './ui/CryptaPage';
+export { CryptaPage } from "./ui/CryptaPage";

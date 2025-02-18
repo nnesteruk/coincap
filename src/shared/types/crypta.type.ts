@@ -12,12 +12,12 @@ export type Crypta = {
 };
 export type CryptaWithPlus = Crypta & { plus?: string };
 
-export type CryptaData = Pick<Crypta, 'name' | 'priceUsd' | 'id'> & {
+export type CryptaData = Pick<Crypta, "name" | "priceUsd" | "id"> & {
   count: number;
   suma: number;
   delete?: string;
 };
-export type CryptaHistory = Pick<Crypta, 'priceUsd'> & {
+export type CryptaHistory = Pick<Crypta, "priceUsd"> & {
   time: number;
   date: string;
 };

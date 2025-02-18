@@ -1,8 +1,8 @@
-import { CryptaPage } from 'pages/cryptaPage';
-import { TablePage } from 'pages/index';
-import { Main } from 'pages/main';
-import { BrowserRouter, Route, Routes } from 'react-router';
-import { BASE_NAME, CRYPTA_PAGE, MAIN } from 'shared/config';
+import { CryptaPage } from "pages/cryptaPage";
+import { TablePage } from "pages/index";
+import { Main } from "pages/main";
+import { BrowserRouter, Route, Routes } from "react-router";
+import { BASE_NAME, CRYPTA_PAGE, MAIN } from "shared/config";
 
 export const RoutesProvider = () => {
   return (

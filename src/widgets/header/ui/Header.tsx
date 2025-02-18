@@ -1,13 +1,13 @@
-import { AppBar, IconButton, Typography } from '@mui/material';
-import WorkOutlineIcon from '@mui/icons-material/WorkOutline';
-import './header.scss';
-import { open, useAppDispatch, useAppSelector } from 'shared/state';
+import { AppBar, IconButton, Typography } from "@mui/material";
+import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
+import "./header.scss";
+import { open, useAppDispatch, useAppSelector } from "shared/state";
 import {
   selectData,
   selectSuma,
   selectTopThree,
-} from 'shared/state/slices/cryptaSlice';
-import { useFormatNumbers } from 'shared/hooks';
+} from "shared/state/slices/cryptaSlice";
+import { useFormatNumbers } from "shared/hooks";
 
 export const Header = () => {
   const suma = useAppSelector(selectSuma);
@@ -16,7 +16,7 @@ export const Header = () => {
   const topThree = useAppSelector(selectTopThree);
   const { fixed } = useFormatNumbers();
   const handleOpen = () => {
-    dispatch(open({ type: 'portfolio', data: cryptaData }));
+    dispatch(open({ type: "portfolio", data: cryptaData }));
   };
 
   return (

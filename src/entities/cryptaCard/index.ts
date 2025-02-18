@@ -1,1 +1,1 @@
-export { CryptaCard } from './ui/CryptaCard';
+export { CryptaCard } from "./ui/CryptaCard";

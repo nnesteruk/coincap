@@ -1,11 +1,11 @@
-import { PropsWithChildren } from 'react';
+import { PropsWithChildren } from "react";
 import {
   close,
   selectIsOpen,
   useAppDispatch,
   useAppSelector,
-} from 'shared/state';
-import { BasicModal } from 'shared/ui/modal';
+} from "shared/state";
+import { BasicModal } from "shared/ui/modal";
 
 export const ModalWithRedux = ({ children }: PropsWithChildren) => {
   const dispatch = useAppDispatch();

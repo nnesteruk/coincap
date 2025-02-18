@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Crypta } from 'shared/types/crypta.type';
+import { useState } from "react";
+import { Crypta } from "shared/types/crypta.type";
 
 export const usePaginationItems = (crypta: Crypta[], itemsPerPage = 20) => {
   const [currentPage, setcurrentPage] = useState(1);

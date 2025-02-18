@@ -1,13 +1,13 @@
-import { FormComponent } from 'entities/formComponent';
-import { Portfolio } from 'entities/portfolio';
+import { FormComponent } from "entities/formComponent";
+import { Portfolio } from "entities/portfolio";
 import {
   close,
   selectIsOpen,
   selectType,
   useAppDispatch,
   useAppSelector,
-} from 'shared/state';
-import { BasicModal } from 'shared/ui/modal';
+} from "shared/state";
+import { BasicModal } from "shared/ui/modal";
 
 export const ModalWithLogic = () => {
   const dispatch = useAppDispatch();
@@ -16,11 +16,11 @@ export const ModalWithLogic = () => {
     dispatch(close());
   };
   const type = useAppSelector(selectType);
-  const className = type === 'portfolio' ? 'modal-size' : 'modal__form-size';
+  const className = type === "portfolio" ? "modal-size" : "modal__form-size";
 
   return (
     <BasicModal open={open} close={handleClose} className={className}>
-      {type === 'portfolio' ? <Portfolio /> : <FormComponent />}
+      {type === "portfolio" ? <Portfolio /> : <FormComponent />}
     </BasicModal>
   );
 };

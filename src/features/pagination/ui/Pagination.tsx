@@ -1,4 +1,4 @@
-import './pagination.scss';
+import "./pagination.scss";
 
 export const Pagination = ({
   totalPages,
@@ -15,7 +15,8 @@ export const Pagination = ({
         <button
           key={index}
           onClick={() => handlePage(index + 1)}
-          disabled={currentPage === index + 1}>
+          disabled={currentPage === index + 1}
+        >
           {index + 1}
         </button>
       ))}

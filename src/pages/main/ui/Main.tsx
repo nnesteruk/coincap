@@ -1,7 +1,7 @@
-import { Outlet } from 'react-router';
-import { Header } from 'widgets/header';
-import { ModalWithLogic } from 'widgets/modal';
-import './Main.scss';
+import { Outlet } from "react-router";
+import { Header } from "widgets/header";
+import { ModalWithLogic } from "widgets/modal";
+import "./Main.scss";
 
 export const Main = () => {
   return (

@@ -1,1 +1,1 @@
-export { ModalWithRedux } from './ui/ModalWithRedux';
+export { ModalWithRedux } from "./ui/ModalWithRedux";

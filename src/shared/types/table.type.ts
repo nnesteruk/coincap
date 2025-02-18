@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
+import { ReactNode } from "react";
 
 export type ColumType<T> = {
   key: keyof T;
   label: string;
   attributes?: Partial<{
-    align: 'center' | 'left' | 'right';
+    align: "center" | "left" | "right";
     className: string;
     onClick: (e?: React.MouseEvent<HTMLTableCellElement>) => void;
   }>;

@@ -1,6 +1,6 @@
-import { CryptaTable, useGetCrypto } from 'entities/cryptaTable';
-import { Pagination } from 'features/pagination';
-import { usePaginationItems } from 'shared/hooks';
+import { CryptaTable, useGetCrypto } from "entities/cryptaTable";
+import { Pagination } from "features/pagination";
+import { usePaginationItems } from "shared/hooks";
 
 export const TablePage = () => {
   const { crypta } = useGetCrypto();

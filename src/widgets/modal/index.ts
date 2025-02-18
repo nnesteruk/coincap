@@ -1,1 +1,1 @@
-export { ModalWithLogic } from './ui/ModalWithLogic';
+export { ModalWithLogic } from "./ui/ModalWithLogic";

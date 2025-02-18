@@ -1,40 +1,40 @@
-import { ColumType } from 'shared/types';
-import { TableComponent } from 'shared/ui/tableComponent';
-import { useStateLocation } from 'shared/hooks';
-import { CryptaInRow } from '../model/cryptaCard.type';
-import './CryptaCard.scss';
+import { ColumType } from "shared/types";
+import { TableComponent } from "shared/ui/tableComponent";
+import { useStateLocation } from "shared/hooks";
+import { CryptaInRow } from "../model/cryptaCard.type";
+import "./CryptaCard.scss";
 
 export const CryptaCard = () => {
   const { currency } = useStateLocation();
 
   const translateProperty: { [key: string]: string } = {
-    priceUsd: 'Цена',
-    supply: 'Доступное предложение для торговли',
-    maxSupply: 'Общее кол-во выпущенных активов',
-    volumeUsd24Hr: 'Объём торгов за последние 24 часа',
-    vwap24Hr: 'Средняя цена по объёму за последние 24 часа',
-    changePercent24Hr: 'Процентные изменения цены за последние 24 часа',
-    explorer: 'Сайт',
+    priceUsd: "Цена",
+    supply: "Доступное предложение для торговли",
+    maxSupply: "Общее кол-во выпущенных активов",
+    volumeUsd24Hr: "Объём торгов за последние 24 часа",
+    vwap24Hr: "Средняя цена по объёму за последние 24 часа",
+    changePercent24Hr: "Процентные изменения цены за последние 24 часа",
+    explorer: "Сайт",
   };
 
   const formatCell = (key: string, value: string) => {
-    if (!value) return '-';
-    if (key === 'changePercent24Hr') {
+    if (!value) return "-";
+    if (key === "changePercent24Hr") {
       const numValue = Number(value);
       return (
-        <span className={numValue > 0 ? 'green' : 'red'}>
+        <span className={numValue > 0 ? "green" : "red"}>
           {numValue.toFixed(2)} %
         </span>
       );
     }
-    if (key === 'explorer') {
+    if (key === "explorer") {
       return (
         <a href={String(value)} target="_blank" className="card__link">
           {value.slice(0, 30)}
         </a>
       );
     }
-    const numValue = typeof value === 'string' ? Number(value) : value;
+    const numValue = typeof value === "string" ? Number(value) : value;
     if (isNaN(numValue)) return value;
 
     switch (true) {
@@ -59,12 +59,12 @@ export const CryptaCard = () => {
 
   const columns: ColumType<CryptaInRow>[] = [
     {
-      key: 'info',
-      label: 'Информация',
+      key: "info",
+      label: "Информация",
     },
     {
-      key: 'currencyData',
-      label: 'Данные о валюте',
+      key: "currencyData",
+      label: "Данные о валюте",
     },
   ];
   return (

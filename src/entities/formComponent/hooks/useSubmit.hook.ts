@@ -1,6 +1,6 @@
-import { CryptaData } from 'shared/types/crypta.type';
-import { FormEvent } from 'react';
-import { addData, close, useAppDispatch } from 'shared/state';
+import { CryptaData } from "shared/types/crypta.type";
+import { FormEvent } from "react";
+import { addData, close, useAppDispatch } from "shared/state";
 
 export const useSubmit = (currency: CryptaData | null) => {
   const dispatch = useAppDispatch();

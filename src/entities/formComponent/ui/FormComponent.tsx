@@ -1,11 +1,11 @@
-import { config } from '../model/config';
-import './formComponent.scss';
-import { useSubmit } from '../hooks/useSubmit.hook';
-import { CryptaData } from 'shared/types/crypta.type';
-import { selectType, useAppSelector } from 'shared/state';
+import { config } from "../model/config";
+import "./formComponent.scss";
+import { useSubmit } from "../hooks/useSubmit.hook";
+import { CryptaData } from "shared/types/crypta.type";
+import { selectType, useAppSelector } from "shared/state";
 
 export const FormComponent = () => {
-  const currencyString = localStorage.getItem('currency');
+  const currencyString = localStorage.getItem("currency");
   const currency: CryptaData | null = currencyString
     ? JSON.parse(currencyString)
     : null;
@@ -14,9 +14,9 @@ export const FormComponent = () => {
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="form">
-        {type === 'form' && (
+        {type === "form" && (
           <h1 className="form__title">
-            Купить <span>{currency?.name || ''}</span>
+            Купить <span>{currency?.name || ""}</span>
           </h1>
         )}
         <p className="form__subtitle">Введите количество</p>

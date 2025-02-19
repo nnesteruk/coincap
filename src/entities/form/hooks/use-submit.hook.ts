@@ -7,9 +7,8 @@ export const useSubmit = (currency: CryptaData | null) => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = Object.fromEntries(
-      new FormData(event.target as HTMLFormElement),
-    );
+    const form = event.target as HTMLFormElement;
+    const data = Object.fromEntries(new FormData(form));
     const count = Number(data.count);
     if (!currency) return;
 
@@ -23,7 +22,7 @@ export const useSubmit = (currency: CryptaData | null) => {
       }),
     );
     dispatch(close());
+    form.reset();
   };
-
   return { handleSubmit };
 };

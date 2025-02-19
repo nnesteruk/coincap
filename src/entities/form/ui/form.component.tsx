@@ -11,7 +11,9 @@ export const FormComponent = () => {
     ? JSON.parse(currencyString)
     : null;
   const type = useAppSelector(selectType);
+
   const { handleSubmit } = useSubmit(currency);
+
   return (
     <div className="form-container">
       <form onSubmit={handleSubmit} className="form">
@@ -33,8 +35,7 @@ export const FormComponent = () => {
           type="submit"
           variant="outlined"
           size="medium"
-          className="form__button"
-        >
+          className="form__button">
           Добавить
         </Button>
       </form>

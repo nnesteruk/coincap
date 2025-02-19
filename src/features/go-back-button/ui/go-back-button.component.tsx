@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import "./go-back-button.styles.scss";
+import { Button } from "@mui/material";
 
 export const GoBackButton = () => {
   const navigate = useNavigate();
@@ -7,8 +8,14 @@ export const GoBackButton = () => {
     navigate(-1);
   };
   return (
-    <button className="back-button" onClick={handleGoBack}>
+    <Button
+      variant="outlined"
+      size="medium"
+      className="back-button"
+      onClick={handleGoBack}
+      color="secondary"
+    >
       Назад
-    </button>
+    </Button>
   );
 };

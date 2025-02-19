@@ -9,7 +9,7 @@
     grid-template-columns: 1fr auto;
     justify-items: start;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     @media (max-width: 840px) {
       p {
         font-size: 14px;
@@ -36,9 +36,6 @@
   }
   &__currency {
     text-align: center;
-    p:first-child {
-      font-weight: 600;
-    }
   }
   &__section {
     &-first {
@@ -46,13 +43,8 @@
     }
     &-second {
       display: flex;
-      p:first-child {
-        font-weight: 500;
-        text-align: center;
-      }
       p:last-child {
         color: var(--color-pink);
-        font-size: 18px;
         @media (max-width: 840px) {
           font-size: 15px;
         }

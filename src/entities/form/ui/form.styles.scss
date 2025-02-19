@@ -31,13 +31,16 @@
     text-align: center;
   }
   &__button {
-    justify-self: center;
-    border: 2px solid var(--color-pink-bright);
-    background-color: var(--color-white);
-    border-radius: 20px;
-    padding: 12px 30px;
-    margin-top: 20px;
-    cursor: pointer;
+    &.MuiButtonBase-root {
+      margin-top: 10px;
+      justify-self: center;
+      border: 2px solid var(--color-pink-bright);
+      background-color: var(--color-white);
+      border-radius: 20px;
+      color: black;
+      text-transform: none;
+      cursor: pointer;
+    }
   }
   &__button:hover {
     color: var(--color-white);

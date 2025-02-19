@@ -5,6 +5,7 @@ import { BasicTable } from "shared/ui/table";
 import "./portfolio.styles.scss";
 import { IconCros } from "./icon-cros.component";
 import { fixed } from "shared/helpers";
+import { Typography } from "@mui/material";
 
 export const Portfolio = () => {
   const data = useAppSelector(selectData);
@@ -47,18 +48,20 @@ export const Portfolio = () => {
   ];
   return (
     <div className="portfolio">
-      <h1>Портфель</h1>
+      <Typography variant="h1" fontWeight={400} fontSize={22} margin={1}>
+        Портфель
+      </Typography>
       <BasicTable
         columns={columns}
         data={data}
         tableRowBodyClassName="portfolio__body-row"
       />
-      <p>
+      <Typography>
         Итого:{" "}
         <span className="portfolio__suma">
           {suma ? fixed(String(suma)) : 0} $
         </span>
-      </p>
+      </Typography>
     </div>
   );
 };

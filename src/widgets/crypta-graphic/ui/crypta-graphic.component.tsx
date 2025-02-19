@@ -17,16 +17,12 @@ import {
   useAppSelector,
 } from "shared/store";
 import "./crypta-graphic.styles.scss";
+import { Typography } from "@mui/material";
 export const CryptaGraphic = () => {
   const dispatch = useAppDispatch();
   const { id } = useParams();
   const history = useAppSelector(selectHistory) || [];
   const isLoading = useAppSelector(selectIsLoading);
-  const formattedData = history.map((item) => ({
-    //!попробовать в select сделать
-    time: new Date(item.time).toLocaleDateString(),
-    priceUsd: parseFloat(item.priceUsd),
-  }));
   useEffect(() => {
     if (!id) {
       return;
@@ -41,9 +37,11 @@ export const CryptaGraphic = () => {
       className="graphic__container"
     >
       {isLoading ? (
-        <p>Идет загрузка...</p>
+        <Typography variant="h6" fontWeight={400}>
+          Идет загрузка...
+        </Typography>
       ) : (
-        <LineChart data={formattedData}>
+        <LineChart data={history}>
           <CartesianGrid />
           <XAxis dataKey="time" angle={-45} textAnchor="end" height={100} />
           <YAxis

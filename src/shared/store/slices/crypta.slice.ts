@@ -6,7 +6,10 @@ import {
   CryptaSliceInitialState,
 } from "shared/types/crypta.types";
 import { rootReducer } from "shared/store/store";
-import { fetchGetData, fetchGetHistory } from "shared/api/fetch-crypta-api";
+import {
+  fetchGetData,
+  fetchGetHistory,
+} from "shared/api/fetch-crypta-api.thunk";
 
 const portfolio = localStorage.getItem("portfolio");
 const parsedPortfolio = portfolio ? JSON.parse(portfolio) : null;
@@ -96,7 +99,12 @@ export const cryptaSlice = createSlice({
     selectData: (state) => {
       return state.data;
     },
-    selectHistory: (state) => state.history,
+    selectHistory: (state) => {
+      return state.history?.map((item) => ({
+        time: new Date(item.time).toLocaleDateString(),
+        priceUsd: parseFloat(item.priceUsd),
+      }));
+    },
   },
 }).injectInto(rootReducer);
 

@@ -3,6 +3,7 @@ import "./form.styles.scss";
 import { useSubmit } from "../hooks/use-submit.hook";
 import { CryptaData } from "shared/types/crypta.types";
 import { selectType, useAppSelector } from "shared/store";
+import { Button, Typography } from "@mui/material";
 
 export const FormComponent = () => {
   const currencyString = localStorage.getItem("currency");
@@ -19,7 +20,7 @@ export const FormComponent = () => {
             Купить <span>{currency?.name || ""}</span>
           </h1>
         )}
-        <p className="form__subtitle">Введите количество</p>
+        <Typography className="form__subtitle">Введите количество</Typography>
         {config.map((item) => (
           <input
             key={item.name}
@@ -28,9 +29,14 @@ export const FormComponent = () => {
             className="form__input"
           />
         ))}
-        <button type="submit" className="form__button">
+        <Button
+          type="submit"
+          variant="outlined"
+          size="medium"
+          className="form__button"
+        >
           Добавить
-        </button>
+        </Button>
       </form>
     </div>
   );

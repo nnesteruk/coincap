@@ -25,8 +25,8 @@ export const Header = () => {
           <div className="header__titles">
             {topThree.map((val) => (
               <article className="header__currency" key={val.id}>
-                <Typography>{val.name}</Typography>
-                <p>{fixed(val.priceUsd)} $</p>
+                <Typography fontWeight={600}>{val.name}</Typography>
+                <Typography>{fixed(val.priceUsd)} $</Typography>
               </article>
             ))}
           </div>
@@ -36,8 +36,12 @@ export const Header = () => {
             <WorkOutlineIcon />
           </IconButton>
           <div>
-            <Typography>Итого:</Typography>
-            <p>{suma ? fixed(String(suma)) : 0} $</p>
+            <Typography textAlign={"center"} fontWeight={500}>
+              Итого:
+            </Typography>
+            <Typography fontSize={18}>
+              {suma ? fixed(String(suma)) : 0} $
+            </Typography>
           </div>
         </div>
       </div>

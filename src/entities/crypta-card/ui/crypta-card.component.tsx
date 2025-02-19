@@ -1,30 +1,10 @@
 import { ColumType } from "shared/types";
 import { BasicTable } from "shared/ui/table";
-import { useStateLocation } from "shared/hooks";
 import { CryptaInRow } from "../model/crypta-card.types";
 import "./crypta-card.styles.scss";
-import { formatCell } from "../helpers/format-cell.helpers";
+import { tableData } from "../helpers/table-data.helpers";
 
 export const CryptaCard = () => {
-  const { currency } = useStateLocation();
-
-  const translateProperty: { [key: string]: string } = {
-    priceUsd: "Цена",
-    supply: "Доступное предложение для торговли",
-    maxSupply: "Общее кол-во выпущенных активов",
-    volumeUsd24Hr: "Объём торгов за последние 24 часа",
-    vwap24Hr: "Средняя цена по объёму за последние 24 часа",
-    changePercent24Hr: "Процентные изменения цены за последние 24 часа",
-    explorer: "Сайт",
-  };
-
-  const tableData: CryptaInRow[] = Object.entries(currency)
-    .filter(([key, value]) => key in translateProperty && value)
-    .map(([key, value]) => ({
-      info: translateProperty[key],
-      currencyData: formatCell(key, value),
-    }));
-
   const columns: ColumType<CryptaInRow>[] = [
     {
       key: "info",

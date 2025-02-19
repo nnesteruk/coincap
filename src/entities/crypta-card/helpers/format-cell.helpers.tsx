@@ -1,5 +1,6 @@
 export const formatCell = (key: string, value: string) => {
   if (!value) return "-";
+
   if (key === "changePercent24Hr") {
     const numValue = Number(value);
     return (
@@ -8,6 +9,7 @@ export const formatCell = (key: string, value: string) => {
       </span>
     );
   }
+
   if (key === "explorer") {
     return (
       <a href={String(value)} target="_blank" className="card__link">
@@ -15,7 +17,9 @@ export const formatCell = (key: string, value: string) => {
       </a>
     );
   }
+
   const numValue = typeof value === "string" ? Number(value) : value;
+
   if (isNaN(numValue)) return value;
 
   switch (true) {

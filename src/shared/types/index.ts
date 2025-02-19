@@ -1,2 +1,2 @@
-export type { ColumType, TableProps } from "./table.type";
-export type * from "./crypta.type";
+export type * from "./table.types";
+export type * from "./crypta.types";

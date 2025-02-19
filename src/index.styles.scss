@@ -1,0 +1,27 @@
+@use "./normalise.styles";
+
+:root {
+  --color-white: #ffffff;
+  --color-white-some-gray: #ffe6ec;
+
+  --color-black: #000000;
+  --color-black-with-opacity: #0000002f;
+
+  --color-pink: #f61e9c;
+  --color-pink-bright: #ff69b4;
+
+  --color-green-dark: #007c00;
+  --color-red: red;
+}
+
+body {
+  background-color: var(--color-white-some-gray);
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 1264px;
+  padding: 0 32px;
+  margin: 0 auto;
+}

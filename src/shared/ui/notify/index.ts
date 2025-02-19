@@ -1,1 +1,1 @@
-export { Notify } from "./Notify";
+export { Notify } from "./notify.component";

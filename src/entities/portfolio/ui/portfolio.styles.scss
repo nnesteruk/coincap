@@ -1,0 +1,86 @@
+.modal-size {
+  width: 50vw;
+  height: 50vh;
+}
+.portfolio {
+  h1 {
+    font-size: 22px;
+    margin: 10px 0px;
+  }
+  p {
+    padding: 20px 0px;
+  }
+  &__suma {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  @media (max-width: 768px) {
+    th {
+      font-size: 14px;
+    }
+    .portfolio {
+      &__suma {
+        font-size: 15px;
+      }
+    }
+  }
+  @media (max-width: 500px) {
+    th {
+      padding: 10px 2px;
+      font-size: 12px;
+    }
+    p {
+      font-size: 13px;
+    }
+    h1 {
+      font-size: 18px;
+    }
+
+    .portfolio {
+      &__suma {
+        font-size: 13px;
+      }
+    }
+  }
+
+  @media (max-width: 425px) {
+    th {
+      padding: 2px 2px;
+      font-size: 11px;
+    }
+    h1 {
+      font-size: 17px;
+    }
+  }
+
+  &__body-row {
+    td {
+      font-size: 16px;
+    }
+    button {
+      color: var(--color-black);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio {
+    td {
+      font-size: 12px;
+    }
+    svg {
+      font-size: 18px;
+    }
+  }
+}
+@media (max-width: 585px) {
+  .portfolio td {
+    padding: 0;
+    font-size: 11px;
+  }
+  .modal-size {
+    height: auto;
+    min-height: 30vh;
+    max-height: 60vh;
+  }
+}

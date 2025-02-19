@@ -1,2 +1,2 @@
-export { fetchGetData, fetchGetHistory } from "./fetchCryptaApi";
+export { fetchGetData, fetchGetHistory } from "./fetch-crypta-api";
 export { instance } from "./instance";

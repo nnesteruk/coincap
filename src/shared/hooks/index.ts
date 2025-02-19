@@ -1,4 +1,3 @@
-export { usePaginationItems } from "./usePaginationItems.hook";
-export { useBasicModal } from "./useBasicModal.hook";
-export { useFormatNumbers } from "./useFormatNumber";
-export { useStateLocation } from "./useStateLocation";
+export { usePaginationItems } from "./use-pagination-items.hook";
+export { useBasicModal } from "./use-basic-modal.hook";
+export { useStateLocation } from "./use-state-location.hook";

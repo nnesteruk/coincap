@@ -1,1 +1,1 @@
-export { RoutesProvider } from "./RoutesProvider";
+export { RoutesProvider } from "./routes-provider.component";

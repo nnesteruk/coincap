@@ -2,7 +2,7 @@ import { Crypta, CryptaHistory } from "shared/types";
 import { instance } from "shared/api/instance";
 import { createAppAsyncThunk } from "shared/store";
 import { notify } from "shared/ui/notify/notify.component";
-import { FetchDataResponse } from "./types/fetch-crypta-api.types";
+import { FetchDataResponse } from "./fetch-crypta-api.types";
 
 const getCryptaApi = {
   getCryptas() {
